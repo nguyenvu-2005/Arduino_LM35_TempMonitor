@@ -11,9 +11,12 @@ void loop() {
   float temp0 = (adc0 * 500.0) / 1023.0;
   float temp1 = (adc1 * 500.0) / 1023.0;
 
-  Serial.print(temp0);
-  Serial.print(",");
-  Serial.println(temp1);
+// Xuất dữ liệu qua Serial theo định dạng JSON
+  Serial.print("{\"A0\":");
+  Serial.print(temperatures[0]);
+  Serial.print(",\"A1\":");
+  Serial.print(temperatures[1]);
+  Serial.println("}");
 
   delay(1000);
 }
