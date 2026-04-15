@@ -13,11 +13,14 @@ void loop() {
   float temp1 = (adc1 * 500.0) / 1023.0;
   float temp2 = (adc2 * 500.0) / 1023.0;
 
+// Xuất dữ liệu qua Serial theo định dạng JSON cho cả 3 kênh
+  Serial.print("{\"A0\":");
   Serial.print(temp0);
-  Serial.print(",");
+  Serial.print(",\"A1\":");
   Serial.print(temp1);
-  Serial.print(",");
-  Serial.println(temp2);
+  Serial.print(",\"A2\":");
+  Serial.print(temp2);
+  Serial.println("}");
 
   delay(1000);
 }
