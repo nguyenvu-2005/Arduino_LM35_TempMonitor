@@ -1,3 +1,4 @@
+# Tác giả: https://nguyenvu-2005.github.io/portfolio/
 # Arduino LM35 Temperature Monitor
 
 ## Mô tả
